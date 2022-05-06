@@ -1,0 +1,27 @@
+{
+  "name": "projeto-3---cat-logo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nenooffice/Projeto-3---Cat-logo.git"
+  },
+  "author": "Eugenio Bufalo Rodrigues",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "bugs": {
+    "url": "https://github.com/nenooffice/Projeto-3---Cat-logo/issues"
+  },
+  "homepage": "https://github.com/nenooffice/Projeto-3---Cat-logo#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
+  }
+}
