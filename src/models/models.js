@@ -35,7 +35,6 @@ export const filmes = connection.define('filmes', {
 }, {
   timestamps: false,
   freezeTableName: true,
-  tableName: 'filmes',
   createdAt: false,
   updatedAt: false,
 });
