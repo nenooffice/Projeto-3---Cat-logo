@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/style.css" rel="stylesheet">
   <title> Editar </title>
 </head>
 <body>
@@ -12,8 +13,8 @@
       <section id="form__container">
           <form method="post" action="/editar/<%= editando.id %> ">
               <fieldset>
-                  <legend> Editando o <%= editando.nome %>  </legend>
-                  <fieldset class="fieldset__data">
+                <legend> Editando o <%= editando.nome %> </legend>
+                <fieldset class="fieldset__data">
                     <input type="text" name="titulo" required value="<%= editando.titulo %> ">
                     <label for="titulo"> Nome Filme </label>
                   </fieldset>
