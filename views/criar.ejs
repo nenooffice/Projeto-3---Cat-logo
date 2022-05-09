@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/style.css">
+  <title>Criar</title>
+</head>
+<body>
+
+  <%- include('./partials/header.ejs') %>
+
+  <main>
+
+      <section id="form__container">
+          <form method="post" action="/criar">
+              <fieldset>
+                  <legend> Criar Filme </legend>
+                  <fieldset class="fieldset__data">
+                    <input type="text" name="titulo" required>
+                    <label for="titulo"> Título </label>
+                  </fieldset>
+                  
+                  <fieldset class="fieldset__data">
+                      <input type="number" name="ano" required>
+                      <label for="ano"> Ano de Lançamento </label>
+                  </fieldset>
+                  
+                  <fieldset class="fieldset__data"></fieldset>
+                      <input type="text" name="genero" required>
+                      <label for="genero"> Genêro </label>
+                  </fieldset>
+
+                  <fieldset class="fieldset__data">
+                      <input type="text" name="diretor" required>
+                      <label for="diretor"> Diretor </label>
+                  </fieldset>
+
+                  <fieldset class="fieldset__data">
+                      <input type="url" name="imagem" required>
+                      <label for="imagem"> Capa </label>
+                  </fieldset>
+                  
+                  <div id="btn__container">
+                      <button id="btn__submit" type="submit"> Enviar </button>
+                  </div>
+              </fieldset>
+          </form>
+      </section>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

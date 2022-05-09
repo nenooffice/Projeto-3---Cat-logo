@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/Merchant Copy Doublesize.ttf');
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Digital', 'Times New Roman', Times, serif;
+}
+
+header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 10%;
+  background-color: #da062e;
+}
+
+header nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -120px;
+  background-color: #930013;
+  height: 200px;
+  width: 200px;
+  transform: rotate(30deg);
+}
+
+header::before {
+  position: absolute;
+  left: 45px;
+  top: 25px;
+  content: "Filmesflix";
+  z-index: 1;
+}
+
+main {
+  min-height: 80%;
+}
+
+main div#sub__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #272727;
+}
+
+footer {
+  height: 10%;
+  background-color: #272727;
+}
+
+section#card__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 16px;
+  gap: 16px;
+}
+
+section#details_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 16px;
+  gap: 16px;
+}
+
+section article.cards {
+  height: 400px;
+  width: 350px;
+  border: 3px solid red
+}
+
+article.cards div.card_img {
+  display: flex;
+  justify-content: center;
+  height: 90%;
+  border-bottom: 3px solid red
+}
+
+article.cards div.card_img img {
+  height: 100%;
+}
+
+article.cards div.card_name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+
+table {
+  width: 500px;
+  text-align: center;
+}
+
+table tr:nth-child(odd) {
+  background-color: #930013;
+}
+
+table th {
+  background-color: #da062e;
+}
+
+div.btn__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section#form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+}
+
+section#form__container form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+form fieldset {
+  padding: 20px;
+}
+
+fieldset legend {
+  background-color: #930013;
+}
+
+fieldset.fieldset__data{
+  border: none;
+}
+
+form div#btn__container {
+  display: flex;
+  justify-content: center;
+}
+
+form button#btn__submit {
+  background-color: #da062e;
+  color: #fff;
+  height: 40px;
+  width: 60px;
+}

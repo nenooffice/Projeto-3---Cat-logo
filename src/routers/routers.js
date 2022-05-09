@@ -12,7 +12,7 @@ import {
 export const routers = express.Router();
 
 routers.get('/', getIndex);
-routers.get('/detalhes', getDetalhes);
+routers.get('/detalhes/:id', getDetalhes);
 routers.get('/deletar/:id', getDeletar);
 routers.get('/criar', getCriar);
 routers.get('/editar/:id', getEditar);

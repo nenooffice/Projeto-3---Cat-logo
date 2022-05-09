@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Editar </title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <main>
+      <section id="form__container">
+          <form method="post" action="/editar/<%= editando.id %> ">
+              <fieldset>
+                  <legend> Editando o <%= editando.nome %>  </legend>
+                  <fieldset class="fieldset__data">
+                    <input type="text" name="titulo" required value="<%= editando.titulo %> ">
+                    <label for="titulo"> Nome Filme </label>
+                  </fieldset>
+                  
+                  <fieldset class="fieldset__data">
+                    <input type="text" name="ano" required value="<%= editando.ano %>">
+                    <label for="ano"> Ano de Lançamento </label>
+                  </fieldset>
+                  
+                  <fieldset class="fieldset__data">
+                      <input type="number" name="genero" required value="<%= editando.genero %>">
+                      <label for="genero"> Gênero </label>
+                  </fieldset>
+                  
+                  <fieldset class="fieldset__data">
+                      <input type="text" name="diretor" required value="<%= editando.diretor %>">
+                      <label for="diretor"> Nome Diretor </label>
+                  </fieldset>
+
+                  <fieldset class="fieldset__data">
+                      <input type="url" name="img" required value="<%= editando.imagem %>">
+                      <label for="img"> Imagem </label>
+                  </fieldset>
+
+                  <div id="btn__container">
+                      <button id="btn__submit" type="submit"> Enviar </button>
+                  </div>
+              </fieldset>
+          </form>
+      </section>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

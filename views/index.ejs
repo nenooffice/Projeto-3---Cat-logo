@@ -10,10 +10,31 @@
 
 <body>
 
-  <%- include('partials/header.ejs'); %>
-
+  <%- include('./partials/header.ejs') %>
   <main>
-    <div id></div>
+      <div id="sub__header"> </div>
+      <section id="card__container">
+
+          <% listaFilmes.forEach(element => { %>
+          
+            <a href="/detalhes/<%= element.id %> ">
+              <article class="cards">
+                  <div class="card_img">
+                      <img src="<%= element.imagem %> " alt="<%= element.nome %> ">
+                  </div>
+                  <div class="card_name">
+                      <%= element.nome %>
+                  </div>
+              </article>
+          </a>
+          <div class="btn__container">
+              <a href="/deletar/<%= element.id %> "> <i class="fa-solid fa-trash"></i> </a>
+              <a href="/editar/<%= element.id %> "> <i class="fa-solid fa-pencil"></i> </a>
+          </div>
+          <% }) %>
+      </section>
   </main>
+  <button> </button>
+  <%- include('./partials/footer.ejs') %>
 </body>
 </html>

@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import { connection } from '../database/connection';
+import { connection } from '../database/connection.js';
 
 export const filmes = connection.define('filmes', {
   id: {
@@ -16,22 +16,18 @@ export const filmes = connection.define('filmes', {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
-  diretor: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
   genero: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  capa: {
+  diretor: {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  iframe: {
+  imagem: {
     type: Sequelize.STRING,
     allowNull: false,
-  }
+  },
 }, {
   timestamps: false,
   freezeTableName: true,
@@ -40,7 +36,7 @@ export const filmes = connection.define('filmes', {
 });
 
 // const initTable = async () => {
-//   await F ilmes.sync({ force: true });
+//   await filmes.sync({ force: true });
 //   }
 
-  // initTable();
+//   initTable();

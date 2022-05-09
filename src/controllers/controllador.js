@@ -47,20 +47,19 @@ export const getCriar = (req, res) => {
 }
 
 export const postCriar = async (req, res) => {
-  const { titulo, ano, diretor, genero, capa, iframe } = req.body;
+  const { titulo, ano, diretor, genero, imagem} = req.body;
   try {
-    if (!nome || !ano || !diretor || !genero || !capa || !iframe) {
+    if (!titulo || !ano || !diretor || !genero || !imagem ) {
       res.send('Preencha todos os campos!');
     } else {
       await filmes.create({
         titulo,
         ano,
-        diretor,
         genero,
-        capa,
-        iframe
+        diretor,
+        imagem,
       });
-      res.render('criar.ejs');
+      res.redirect('/');
     }
   } catch (error) {
     res.render(error.message);
@@ -80,14 +79,13 @@ export const getEditar = async (req, res) => {
 
 export const postEditar = async (req, res) => {
   try {
-  const { titulo, ano, diretor, genero, capa, iframe } = req.body;
+  const { titulo, ano, diretor, genero, capa } = req.body;
   await filmes.update({
     titulo: titulo,
     ano: ano,
     diretor: diretor,
     genero: genero,
     capa: capa,
-    iframe: iframe
   }, {
     where: {
       id: req.params.id

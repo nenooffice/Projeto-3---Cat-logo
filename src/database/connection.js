@@ -1,6 +1,7 @@
-import Sequelize from '../../config/sequelize';
-import {} from 'dotenv/config';
+import Sequelize from 'sequelize';
+import dontenv from 'dotenv';
 
+dontenv.config();
 
 export const connection = new Sequelize( 
  process.env.DB_BASE, // Importa pelo nome do Banco de Dados
