@@ -6,12 +6,19 @@ import {
   filmes
 } from '../models/models.js';
 
+let message = '';
+let type = '';
+
+
+
 export const getIndex = async (req, res) => {
   try {
     const listaFilmes = await filmes.findAll();
     console.log(listaFilmes);
     res.render('index.ejs', {
-      listaFilmes
+      listaFilmes,
+      message,
+      type
     });
   } catch (error) {
     console.log(error.message);
@@ -36,6 +43,8 @@ export const getDeletar = async (req, res) => {
         id: req.params.id
       }
     });
+    message = 'Filme deletado com sucesso!';
+    type = 'success';
     res.redirect('/');
   } catch (error) {
     console.log(error.message);
@@ -50,7 +59,8 @@ export const postCriar = async (req, res) => {
   const { titulo, ano, diretor, genero, imagem} = req.body;
   try {
     if (!titulo || !ano || !diretor || !genero || !imagem ) {
-      res.send('Preencha todos os campos!');
+      message = 'Preencha todos os campos!';
+      type = 'danger';
     } else {
       await filmes.create({
         titulo,
@@ -59,6 +69,8 @@ export const postCriar = async (req, res) => {
         diretor,
         imagem,
       });
+      message = "Filme cadastrado com sucesso!";
+      type = "success";
       res.redirect('/');
     }
   } catch (error) {
@@ -91,6 +103,8 @@ export const postEditar = async (req, res) => {
       id: req.params.id
     }
   });
+  message = "Filme editado com sucesso!";
+  type = "success";
   res.redirect('/');
   } catch (error) {
     console.log(error.message);

@@ -10,7 +10,21 @@
 
 <body>
 
-  <%- include('./partials/header.ejs') %>
+        <%- include('./partials/header.ejs') %>
+
+        <% if(message != "") { %>
+
+            <section id="message" class="message message-<%= message.type %>">
+
+                <p> <%= message %></p>
+             
+                     <i id="close-message" class="fa-solid fa-times"></i>
+             
+             </section>
+        <% } %>
+   
+
+  
   <main>
       <div id="sub__header"> </div>
       <section id="card__container">
@@ -23,7 +37,7 @@
                       <img src="<%= element.imagem %> " alt="<%= element.nome %> ">
                   </div>
                   <div class="card_name">
-                      <%= element.nome %>
+                      <%= element.titulo %>
                   </div>
               </article>
           </a>
@@ -36,5 +50,7 @@
   </main>
 
   <%- include('./partials/footer.ejs') %>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>

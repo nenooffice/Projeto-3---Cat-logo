@@ -1,13 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: 'Digital';
-  src: url('../fonts/Merchant Copy Doublesize.ttf');
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"); 
+
 
 a {
   text-decoration: none;
@@ -76,8 +75,24 @@ main div#sub__header {
 }
 
 footer {
-  height: 10%;
-  background-color: #272727;
+  display: flex;
+  background-color: #dc0a2d;
+  padding: 2rem;
+  justify-content: center;
+}
+
+footer p {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: .3rem;
+}
+
+footer p a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
 }
 
 section#card__container {
@@ -179,4 +194,33 @@ form button#btn__submit {
   color: #fff;
   height: 40px;
   width: 60px;
+}
+
+section#message {
+  padding: 1.5rem;
+  background-color: rgb(197, 255, 214);
+  color: #004d04;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i #close-message:hover{
+  color: rgb(255, 0, 0);
+  transform: scale(1.5);
+}
+
+i #close-message {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s;
 }
